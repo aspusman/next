@@ -38,14 +38,14 @@ async function safeFetch<T>(path: string, init?: RequestInit): Promise<T> {
     //clearTimeout(timeout)
   }
 } 
-
+// usman waheed here 
 
 
 // Public API helpers — all wrapped with try/catch at call sites
 export const api = {
   listProducts: (payload: any) => safeFetch<ApiListResponse<Product>>('/vouchers/get/list', {
     method: 'POST',
-    headers: {
+    headers: { 
       'Content-Type': 'application/json',
       Authorization: process.env.NEXT_PUBLIC_MVP_API_AUTH || '', // from .env.local
     },
